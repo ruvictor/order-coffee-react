@@ -1,0 +1,7 @@
+.App {
+  background-color: #465C96;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  display: table
+}
