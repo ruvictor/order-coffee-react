@@ -1,0 +1,8 @@
+.Sizes {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    min-height: 600px;
+    grid-gap: 50px;
+    gap: 50px;
+}

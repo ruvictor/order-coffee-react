@@ -5,3 +5,13 @@
   box-sizing: border-box;
   display: table
 }
+
+.StepTitle {
+  background-color: #0aa200;
+  padding: 30px 0;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+}
