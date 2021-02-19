@@ -1,5 +1,7 @@
 .App {
-  background-color: #465C96;
+  background-image: url("./assets/bg.jpg");
+  background-position: center 72.5%;
+  background-size: cover;
   width: 100%;
   height: 100vh;
   box-sizing: border-box;

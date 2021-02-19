@@ -8,7 +8,7 @@
 
 .coffeeBlock:hover .cup,
 .coffeeBlock:hover .bottom {
-    background-color: #dddddd;
+    background-color: #909090;
     transition: all 0.3s ease-in-out;
  }
 
@@ -20,26 +20,29 @@
     position: relative;
     margin: 0 auto -28px;
     width: 233px;
+    animation: shake .4s ease-in;
 }
 
 .lid {
-    background-color: #fff;
+    background-color: #dddddd;
     height: 20px;
     border-radius: 50%;
     border: 8px solid #ddd;
     z-index: 9;
     position: relative;
     box-shadow: 0 1px 3px 0 rgb(0 0 0 / 51%);
+    animation: shake .4s ease-in;
 }
 
 .cup {
     transition: all 0.3s ease-in-out;
     margin: -18px auto 0;
-    background-color: #fff;
+    background-color: #dddddd;
     height: 300px;
     width: 100%;
     max-width: 240px;
     clip-path: polygon(50% 250%, 0 0, 100% 0);
+    animation: shake .4s ease-in;
 }
 
 .logo {
@@ -50,7 +53,7 @@
 }
 
 .bottom {
-    background-color: #fff;
+    background-color: #dddddd;
     height: 20px;
     border-radius: 50%;
     z-index: 9;
@@ -58,6 +61,7 @@
     width: 144px;
     margin: -10px auto 0;
     transition: all 0.3s ease-in-out;
+    animation: shake .4s ease-in;
 }
 
 .vapour {
@@ -99,5 +103,23 @@
     }
     100% {
         transform: translateY(-300px) scaleX(10);
+    }
+}
+
+@keyframes shake{
+    0%{
+        transform: translate(0);
+    }
+    25%{
+        transform: translate(.8em);
+    }
+    50%{
+        transform: translate(-.2em);
+    }
+    80%{
+        transform: translate(.8em);
+    }
+    100%{
+        transform: translate(0);
     }
 }
