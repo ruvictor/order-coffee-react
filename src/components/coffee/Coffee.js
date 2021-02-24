@@ -1,4 +1,3 @@
-import React, { Component } from 'react';
 import styled from 'styled-components';
 import './Coffee.css';
 
@@ -15,26 +14,13 @@ const Vapour10 = styled.span`--v:10;`;
 const Vapour11 = styled.span`--v:11;`;
 const Vapour12 = styled.span`--v:12;`;
 
-class Coffee extends Component{
-
-    state = {
-        clicked: ''
-    }
-    
-
-    chooseCoffee = (size) => {
-        console.log(size);
-        this.setState({clicked: size})
-        // return size;
-    }
-    
-    render(){
+const Coffee = props => {
         let style = {
-            height: this.props.size === 'small' ? '200px' : 
-            this.props.size === 'medium' ? '250px' : ''
+            height: props.size === 'small' ? '200px' : 
+            props.size === 'medium' ? '250px' : ''
         };
         return (
-            <div className="coffeeBlock" onClick={() => this.chooseCoffee(this.props.size)}>
+            <div className="coffeeBlock">
                 <div className="coffee">
                     <div className="vapour">
                         <Vapour1></Vapour1>
@@ -56,7 +42,6 @@ class Coffee extends Component{
                 <div className="bottom"></div>
             </div>
         )
-    }
 }
 
 export default Coffee;

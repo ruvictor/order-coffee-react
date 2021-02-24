@@ -1,19 +1,20 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import Size from './components/sizes/Size';
 import './App.css';
 
-class App extends Component {
-  state = {
-    step: 1,
-    size: ''
+const App = () => {
+  // hooks
+  const [step, setStep] = useState(1);
+
+  const updateStep = () => {
+    setStep( step + 1 );
   }
-  render(){
-    return (
-      <div className="App">
-        <Size size={this.state.size} />
-      </div>
-    );
-  }
+
+  return (
+    <div className="App">
+      <Size step={step} onClick={() => updateStep} />
+    </div>
+  );
 }
 
 export default App;
