@@ -20,7 +20,7 @@
     position: relative;
     margin: 0 auto -28px;
     width: 233px;
-    animation: shake .4s ease-in;
+    
 }
 
 .lid {
@@ -31,7 +31,6 @@
     z-index: 9;
     position: relative;
     box-shadow: 0 1px 3px 0 rgb(0 0 0 / 51%);
-    animation: shake .4s ease-in;
 }
 
 .cup {
@@ -42,7 +41,6 @@
     width: 100%;
     max-width: 240px;
     clip-path: polygon(50% 250%, 0 0, 100% 0);
-    animation: shake .4s ease-in;
 }
 
 .logo {
@@ -61,7 +59,6 @@
     width: 144px;
     margin: -10px auto 0;
     transition: all 0.3s ease-in-out;
-    animation: shake .4s ease-in;
 }
 
 .vapour {
