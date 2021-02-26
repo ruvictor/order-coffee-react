@@ -7,7 +7,7 @@ const App = () => {
   const [step, setStep] = useState(1);
   const [size, setSize] = useState('');
 
-  const nextStep = (size) => {
+  const nextStep = () => {
     setStep( step + 1 );
   }
 
@@ -19,17 +19,18 @@ const App = () => {
     let currentStep = '';
     switch(step){
       case 1:{
-        currentStep = <Size
-                        nextStep={nextStep}
-                        clickedItem={clickedItem}
-                        clickedSize={size}
-                        />
+        currentStep = 
+        <Size
+          nextStep={nextStep}
+          clickedItem={clickedItem}
+          clickedSize={size}
+        />
         break;
       }
       default: currentStep = <Size
-        nextStep={nextStep}
-        clickedItem={clickedItem}
-        clickedSize={size}
+          nextStep={nextStep}
+          clickedItem={clickedItem}
+          clickedSize={size}
         />
         break;
     }

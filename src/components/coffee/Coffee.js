@@ -15,14 +15,9 @@ const Vapour11 = styled.span`--v:11;`;
 const Vapour12 = styled.span`--v:12;`;
 
 const Coffee = props => {
-    console.log(props);
 
     const nextStep = (size) => {
         props.nextStep(size);
-        // clickStyle = {
-        //     animation: 'shake .4s ease-in'
-        // };
-        // return clickStyle;
     }
 
     const clickedItem = (item) => {
