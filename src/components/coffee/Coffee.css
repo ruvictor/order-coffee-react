@@ -1,16 +1,13 @@
 .coffeeBlock {
-    width: 250px;
-}
-
-.coffeeBlock {
     cursor: pointer;
+    width: 250px;
 }
 
 .coffeeBlock:hover .cup,
 .coffeeBlock:hover .bottom {
     background-color: #909090;
     transition: all 0.3s ease-in-out;
- }
+}
 
 .coffee {
     background-color: #501E03;
@@ -72,7 +69,7 @@
     margin: 0 2px 50px;
     min-width: 8px;
     height: 120px;
-    background: #909090;
+    background: #ffffff;
     border-radius: 50%;
     animation: animate 5s linear infinite;
     opacity: 0;
@@ -84,6 +81,7 @@
     animation: clickedSize .4s ease-in;
 }
 .jump .cup,
+.jump .vapour span,
 .jump .bottom{
     background-color: #909090;
 }
