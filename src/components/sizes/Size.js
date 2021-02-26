@@ -7,9 +7,24 @@ const Size = (props) => {
         <>
             <div className="StepTitle">Choose your Size</div>
             <div className="Sizes">
-                <Coffee nextStep={props.nextStep} size='small' />
-                <Coffee nextStep={props.nextStep} size='medium' />
-                <Coffee nextStep={props.nextStep} size='large' />
+                <Coffee
+                    clickedSize={props.clickedSize}
+                    clickedItem={props.clickedItem}
+                    nextStep={props.nextStep}
+                    size='small'
+                />
+                <Coffee
+                    clickedSize={props.clickedSize}
+                    clickedItem={props.clickedItem}
+                    nextStep={props.nextStep}
+                    size='medium'
+                />
+                <Coffee
+                    clickedSize={props.clickedSize}
+                    clickedItem={props.clickedItem}
+                    nextStep={props.nextStep}
+                    size='large'
+                />
             </div>
         </>
     );

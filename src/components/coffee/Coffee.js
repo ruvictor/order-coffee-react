@@ -15,23 +15,33 @@ const Vapour11 = styled.span`--v:11;`;
 const Vapour12 = styled.span`--v:12;`;
 
 const Coffee = props => {
-    let clickStyle = {
-        
-    };
-    const nextStep = () => {
-        // props.nextStep();
-        clickStyle = {
-            animation: 'shake .4s ease-in'
-        };
+    console.log(props);
+
+    const nextStep = (size) => {
+        props.nextStep(size);
+        // clickStyle = {
+        //     animation: 'shake .4s ease-in'
+        // };
+        // return clickStyle;
+    }
+
+    const clickedItem = (item) => {
+        props.clickedItem(item);
+    }
+
+    const clickedSize = (size) => {
+        nextStep(size);
+        clickedItem(size);
     }
 
     let style = {
         height: props.size === 'small' ? '200px' : 
         props.size === 'medium' ? '250px' : ''
     };
+
     return (
-        <div className="coffeeBlock" onClick={() => nextStep()}>
-            <div className="coffee" style={clickStyle}>
+        <div className={props.clickedSize === props.size ? "jump coffeeBlock" : "coffeeBlock"} onClick={() => clickedSize(props.size)}>
+            <div className="coffee">
                 <div className="vapour">
                     <Vapour1></Vapour1>
                     <Vapour2></Vapour2>

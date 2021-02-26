@@ -20,7 +20,7 @@
     position: relative;
     margin: 0 auto -28px;
     width: 233px;
-    
+    animation: shake .4s ease-in;
 }
 
 .lid {
@@ -31,6 +31,7 @@
     z-index: 9;
     position: relative;
     box-shadow: 0 1px 3px 0 rgb(0 0 0 / 51%);
+    animation: shake .4s ease-in;
 }
 
 .cup {
@@ -41,13 +42,7 @@
     width: 100%;
     max-width: 240px;
     clip-path: polygon(50% 250%, 0 0, 100% 0);
-}
-
-.logo {
-    max-width: 100px;
-    position: absolute;
-    top: 35%;
-    left: 28%;
+    animation: shake .4s ease-in;
 }
 
 .bottom {
@@ -59,6 +54,7 @@
     width: 144px;
     margin: -10px auto 0;
     transition: all 0.3s ease-in-out;
+    animation: shake .4s ease-in;
 }
 
 .vapour {
@@ -76,12 +72,20 @@
     margin: 0 2px 50px;
     min-width: 8px;
     height: 120px;
-    background: #fff;
+    background: #909090;
     border-radius: 50%;
     animation: animate 5s linear infinite;
     opacity: 0;
     filter: blur(10px);
     animation-delay: calc(var(--v) * -0.5s);
+}
+
+.jump {
+    animation: clickedSize .4s ease-in;
+}
+.jump .cup,
+.jump .bottom{
+    background-color: #909090;
 }
 
 @keyframes animate {
@@ -100,6 +104,24 @@
     }
     100% {
         transform: translateY(-300px) scaleX(10);
+    }
+}
+
+@keyframes clickedSize {
+    0%{
+        transform: translate(0);
+    }
+    25%{
+        transform: translateY(-1em);
+    }
+    50%{
+        transform: translateY(0);
+    }
+    80%{
+        transform: translateY(-1em);
+    }
+    100%{
+        transform: translateY(0);
     }
 }
 

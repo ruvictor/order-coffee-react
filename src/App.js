@@ -1,28 +1,37 @@
 import React, { useState } from 'react';
 import Size from './components/sizes/Size';
 import './App.css';
-import Flavors from './components/flavors/Flavors';
 
 const App = () => {
   // hooks
   const [step, setStep] = useState(1);
+  const [size, setSize] = useState('');
 
-  const nextStep = () => {
+  const nextStep = (size) => {
     setStep( step + 1 );
+  }
+
+  const clickedItem = (item) => {
+    setSize(item);
   }
 
   const stepSwitcher = (step) => {
     let currentStep = '';
     switch(step){
-      case 1:{ 
-        currentStep = <Size nextStep={nextStep} />
+      case 1:{
+        currentStep = <Size
+                        nextStep={nextStep}
+                        clickedItem={clickedItem}
+                        clickedSize={size}
+                        />
         break;
       }
-      case 2:{ 
-        currentStep = <Flavors nextStep={nextStep} />
+      default: currentStep = <Size
+        nextStep={nextStep}
+        clickedItem={clickedItem}
+        clickedSize={size}
+        />
         break;
-      }
-      default: currentStep = <Size step={step} nextStep={nextStep} />;
     }
     return currentStep;
   }
